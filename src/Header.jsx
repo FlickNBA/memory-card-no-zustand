@@ -2,7 +2,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import { Typography } from '@mui/material';
 import { Button } from '@mui/material';
 
-export default function Header({ height }) {
+export default function Header({ height, cardsClicked }) {
   console.log('callin header');
   return (
     <Grid
@@ -19,24 +19,14 @@ export default function Header({ height }) {
     >
       <Grid xs={8}>
         <Typography
-          variant='h4'
+          variant='p'
           color='primary'
           sx={{
             fontWeight: 500,
           }}
         >
-          {/* temp: {store.temp}
-          <br />
-          test: {store.test}
-          <br />
-          all: {store.all.join(', ')}
-          <br />
-          shown: {store.shown.join(', ')}
-          <br />
-          left: {store.left.join(', ')}
-          <br />
-          clicked: {store.clicked.join(', ')} */}
-          Yu-Gi-Oh! Memory Card Game!
+          clicked: {cardsClicked.join(', ')}
+          {/* Yu-Gi-Oh! Memory Card Game! */}
         </Typography>
         <Typography
           variant='h6'
@@ -45,7 +35,7 @@ export default function Header({ height }) {
             fontWeight: 400,
           }}
         >
-          Get points by clicking on card, but don't click on any more than once!
+          {/* Get points by clicking on card, but don't click on any more than once! */}
         </Typography>
       </Grid>
       <Grid xs={4}>
@@ -57,11 +47,8 @@ export default function Header({ height }) {
             fontWeight: 500,
           }}
         >
-          Score: 777
+          Score: 0
         </Typography>
-        {/* <Button variant='contained' onClick={handleClick}>
-          Contained
-        </Button> */}
       </Grid>
     </Grid>
   );
