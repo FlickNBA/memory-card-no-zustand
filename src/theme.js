@@ -1,17 +1,21 @@
 import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import * as colors from '@mui/material/colors';
 
-// Create a theme instance.
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: colors.indigo['900'],
     },
     secondary: {
-      main: '#19857b',
+      main: colors.indigo['700'],
+    },
+    background: {
+      default: colors.indigo['100'],
+      primary: colors.indigo['200'],
+      secondary: colors.indigo['300'],
     },
     error: {
-      main: red.A400,
+      main: colors.red['700'],
     },
   },
 });
