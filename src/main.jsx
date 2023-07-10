@@ -11,6 +11,6 @@ const root = createRoot(rootElement);
 root.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <App columns={4} cards={8} />
+    <App />
   </ThemeProvider>
 );
